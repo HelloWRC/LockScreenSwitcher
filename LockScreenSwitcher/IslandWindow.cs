@@ -116,8 +116,10 @@ internal sealed unsafe class IslandWindow
     {
         if (window != default)
         {
-            PInvoke.DestroyWindow(window);
+            // Explicit cleanup can precede the startup error dialog; do not queue WM_QUIT.
+            HWND closing = window;
             window = default;
+            PInvoke.DestroyWindow(closing);
         }
     }
 
@@ -230,7 +232,7 @@ internal sealed unsafe class IslandWindow
                             PInvoke.PostQuitMessage(0);
                         }
                         return default;
-                    case PInvoke.WM_DESTROY:
+                    case PInvoke.WM_DESTROY when host.window == hwnd:
                         host.window = default;
                         PInvoke.PostQuitMessage(0);
                         return default;

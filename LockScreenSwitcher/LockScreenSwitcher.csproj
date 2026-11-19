@@ -2,9 +2,9 @@
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
-        <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
-        <WindowsSdkPackageVersion>10.0.26100.87</WindowsSdkPackageVersion>
+        <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+        <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+        <WindowsSdkPackageVersion>10.0.19041.87</WindowsSdkPackageVersion>
         <UseUwp>true</UseUwp>
         <UseUwpTools>false</UseUwpTools>
         <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
